@@ -1,0 +1,5 @@
+*.swp
+/.netrwhist
+/autoload/plug.vim.old
+/plugged
+/spell

@@ -1,0 +1,6 @@
+/*
+!/.lvimrc
+!/.config/
+/.config/*
+!/.config/nvim/
+!*.kdbx

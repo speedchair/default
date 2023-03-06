@@ -1,0 +1,20 @@
+{
+  "go.goplsOptions": {
+    "gofumpt": true
+  },
+  "yaml.format.enable": true,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": [
+        "serve"
+      ],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
+}
