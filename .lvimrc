@@ -17,6 +17,7 @@ if &ft ==# 'go'
   setl noet ts=8 sw=8
   let b:ale_linters = {'go': ['golangci-lint']}
   au lvimrc BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
+  au lvimrc BufWritePre <buffer> :silent call CocAction('runCommand', 'editor.action.organizeImport')
   nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
   nn <buffer> <silent> K :call CocAction('doHover')<CR>
   nn <buffer> <silent> <Leader>r :call CocAction('jumpReferences')<CR>
