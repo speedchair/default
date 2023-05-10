@@ -15,6 +15,7 @@ endif
 
 if &ft ==# 'go'
   setl noet ts=8 sw=8
+  let b:ale_enabled = 0
   let b:ale_linters = {'go': ['golangci-lint']}
   au lvimrc BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
   au lvimrc BufWritePre <buffer> :silent call CocAction('runCommand', 'editor.action.organizeImport')
