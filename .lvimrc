@@ -2,8 +2,6 @@ aug lvimrc
   au! * <buffer>
 aug END
 
-nn <buffer> <silent> <Leader>s :CocSearch | 
-
 if &ft ==# 'helm' || &ft ==# 'mustache'
   setl et ts=2 sw=2
 endif

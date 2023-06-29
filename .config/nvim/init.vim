@@ -13,6 +13,8 @@ if !exists('g:vscode')
   let g:localvimrc_sandbox = 0
   set synmaxcol=1000
 
+  cnoreabbrev S CocSearch
+
   au BufRead *.git/COMMIT_EDITMSG setl spell
   colorscheme peachpuff
   set clipboard=unnamedplus
