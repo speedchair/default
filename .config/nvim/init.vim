@@ -14,6 +14,7 @@ if !exists('g:vscode')
   set synmaxcol=1000
 
   cnoreabbrev S CocSearch
+  inoremap <silent><expr> <c-x><c-o> coc#refresh()
 
   au BufRead *.git/COMMIT_EDITMSG setl spell
   colorscheme peachpuff
