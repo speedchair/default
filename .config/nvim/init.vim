@@ -17,7 +17,7 @@ if !exists('g:vscode')
   inoremap <silent><expr> <c-x><c-o> coc#refresh()
 
   au BufRead *.git/COMMIT_EDITMSG setl spell
-  colorscheme peachpuff
+  colorscheme blue
   set clipboard=unnamedplus
   set cmdheight=0
   set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
