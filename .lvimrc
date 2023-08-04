@@ -26,9 +26,7 @@ endif
 if &ft ==# 'python'
   setl et ts=4 sw=4
   let b:ale_linters = {'python': ['pyre']}
-  let b:coc_root_patterns = ['.git', 'venv']
-  au lvimrc BufWritePre <buffer> :silent call CocAction('format')
-  au lvimrc BufWritePre <buffer> :silent call CocAction('runCommand', 'pyright.organizeimports')
+  let b:coc_root_patterns = ['.git', 'venv', '.venv']
   nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
   nn <buffer> <silent> K :call CocAction('doHover')<CR>
   nn <buffer> <silent> <Leader>r :call CocAction('jumpReferences')<CR>
