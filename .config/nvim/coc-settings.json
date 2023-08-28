@@ -15,5 +15,6 @@
       "initializationOptions": {},
       "settings": {}
     }
-  }
+  },
+  "markdown-preview-enhanced.previewTheme": "solarized-light.css"
 }
