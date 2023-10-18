@@ -16,7 +16,7 @@ if !exists('g:vscode')
   let g:localvimrc_sandbox = 0
   set synmaxcol=1000
 
-  colorscheme peachpuff
+  colorscheme shine
   set clipboard=unnamedplus
   set cmdheight=0
   set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
