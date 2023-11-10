@@ -8,14 +8,6 @@ if !exists('g:vscode')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-vinegar'
 
-  au BufRead *.git/COMMIT_EDITMSG setl spell
-  cnoreabbrev S CocSearch
-  inoremap <silent><expr> <c-x><c-o> coc#refresh()
-  let g:coc_disable_transparent_cursor = 1
-  let g:localvimrc_persistent = 2
-  let g:localvimrc_sandbox = 0
-  set synmaxcol=1000
-
   colorscheme peachpuff
   set clipboard=unnamedplus
   set cmdheight=0
@@ -23,6 +15,14 @@ if !exists('g:vscode')
   set noshowcmd noshowmode
   set statusline=%f\ %m
   set title
+
+  au BufRead *.git/COMMIT_EDITMSG setl spell
+  cnoreabbrev S CocSearch
+  inoremap <silent><expr> <c-x><c-o> coc#refresh()
+  let g:coc_disable_transparent_cursor = 1
+  let g:localvimrc_persistent = 2
+  let g:localvimrc_sandbox = 0
+  set synmaxcol=1000
 endif
 Plug 'michaeljsmith/vim-indent-object'
 call plug#end()
