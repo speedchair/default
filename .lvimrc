@@ -19,7 +19,7 @@ if &ft ==# 'go'
   au lvimrc BufWritePre <buffer> :silent call CocAction('runCommand', 'editor.action.organizeImport')
   nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
   nn <buffer> <silent> K :call CocAction('doHover')<CR>
-  nn <buffer> <silent> <Leader>r :call CocAction('jumpReferences')<CR>
+  nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
   nn <buffer> <silent> <Leader>i :call CocAction('jumpImplementation')<CR>
 endif
 
@@ -29,7 +29,7 @@ if &ft ==# 'python'
   let b:coc_root_patterns = ['.git', 'venv', '.venv']
   nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
   nn <buffer> <silent> K :call CocAction('doHover')<CR>
-  nn <buffer> <silent> <Leader>r :call CocAction('jumpReferences')<CR>
+  nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
 endif
 
 if &ft ==# 'vim'
@@ -48,7 +48,7 @@ if &ft ==# 'javascript' || &ft ==# 'typescript'
   setl et ts=4 sw=4
   nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
   nn <buffer> <silent> K :call CocAction('doHover')<CR>
-  nn <buffer> <silent> <Leader>r :call CocAction('jumpReferences')<CR>
+  nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
 endif
 
 if &ft ==# 'markdown'
