@@ -22,6 +22,7 @@ if !exists('g:vscode')
   let g:coc_disable_transparent_cursor = 1
   let g:localvimrc_persistent = 2
   let g:localvimrc_sandbox = 0
+  let g:python3_host_prog = "~/.local/bin/python3"
   set synmaxcol=1000
 endif
 Plug 'michaeljsmith/vim-indent-object'
