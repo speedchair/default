@@ -1,7 +1,6 @@
 call plug#begin()
 if !exists('g:vscode')
   Plug 'embear/vim-localvimrc'
-  Plug 'honza/vim-snippets'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-fugitive'
