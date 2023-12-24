@@ -1,6 +1,5 @@
 call plug#begin()
 if !exists('g:vscode')
-  Plug 'dense-analysis/ale'
   Plug 'embear/vim-localvimrc'
   Plug 'honza/vim-snippets'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
