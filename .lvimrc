@@ -6,6 +6,8 @@ if &ft ==# 'helm' || &ft ==# 'mustache'
   setl et ts=2 sw=2
 endif
 
+
+if &ft =~ '\vyaml|json'
 if &ft ==# 'yaml' || &ft ==# 'json'
   setl et ts=2 sw=2
   nn <buffer> <silent> K :call CocAction('doHover')<CR>
