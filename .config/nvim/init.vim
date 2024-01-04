@@ -4,7 +4,6 @@ aug END
 
 call plug#begin()
 if !exists('g:vscode')
-  Plug 'embear/vim-localvimrc'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-fugitive'
@@ -22,8 +21,6 @@ if !exists('g:vscode')
   cnoreabbrev S CocSearch
   inoremap <silent><expr> <c-x><c-o> coc#refresh()
   let g:coc_disable_transparent_cursor = 1
-  let g:localvimrc_persistent = 2
-  let g:localvimrc_sandbox = 0
   let g:python3_host_prog = "~/.local/bin/python3"
   set synmaxcol=1000
 
@@ -44,15 +41,19 @@ if !exists('g:vscode')
     \ | nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
     \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
     \ | nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
-  au vimrc FileType go
-    \ setl noet ts=8 sw=8
-      \ | au! lvimrc * <buffer>
-      \ | au lvimrc BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
-      \ | au lvimrc BufWritePre <buffer> :silent call CocAction('runCommand', 'editor.action.organizeImport')
-    \ | nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
-    \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
-    \ | nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
-    \ | nn <buffer> <silent> <Leader>i :call CocAction('jumpImplementation')<CR>
+  function! VimrcGolang()
+    setl noet ts=8 sw=8
+    aug lvimrc
+      au! * <buffer>
+      au BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
+      au BufWritePre <buffer> :silent CocCommand editor.action.organizeImport
+    aug END
+    nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
+    nn <buffer> <silent> <Leader>i :call CocAction('jumpImplementation')<CR>
+    nn <buffer> <silent> K :call CocAction('doHover')<CR>
+    nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+  endfunction
+  au vimrc FileType go call VimrcGolang()
 endif
 Plug 'michaeljsmith/vim-indent-object'
 call plug#end()
