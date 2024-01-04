@@ -41,7 +41,7 @@ if !exists('g:vscode')
     \ | nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
     \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
     \ | nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
-  function! VimrcGolang()
+  fu! VimrcGolang()
     setl noet ts=8 sw=8
     aug lvimrc
       au! * <buffer>
@@ -52,7 +52,7 @@ if !exists('g:vscode')
     nn <buffer> <silent> <Leader>i :call CocAction('jumpImplementation')<CR>
     nn <buffer> <silent> K :call CocAction('doHover')<CR>
     nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
-  endfunction
+  endf
   au vimrc FileType go call VimrcGolang()
 endif
 Plug 'michaeljsmith/vim-indent-object'
