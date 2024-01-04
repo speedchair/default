@@ -1,3 +1,7 @@
+aug vimrc
+  au! *
+aug END
+
 call plug#begin()
 if !exists('g:vscode')
   Plug 'embear/vim-localvimrc'
@@ -22,6 +26,10 @@ if !exists('g:vscode')
   let g:localvimrc_sandbox = 0
   let g:python3_host_prog = "~/.local/bin/python3"
   set synmaxcol=1000
+
+  au vimrc FileType yaml,json
+    \ setl et ts=2 sw=2
+    \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
 endif
 Plug 'michaeljsmith/vim-indent-object'
 call plug#end()

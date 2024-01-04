@@ -7,11 +7,10 @@ if &ft ==# 'helm' || &ft ==# 'mustache'
 endif
 
 
-if &ft =~ '\vyaml|json'
-if &ft ==# 'yaml' || &ft ==# 'json'
-  setl et ts=2 sw=2
-  nn <buffer> <silent> K :call CocAction('doHover')<CR>
-endif
+" if &ft =~ '\vyaml|json'
+"   setl et ts=2 sw=2
+"   nn <buffer> <silent> K :call CocAction('doHover')<CR>
+" endif
 
 if &ft ==# 'go'
   setl noet ts=8 sw=8
