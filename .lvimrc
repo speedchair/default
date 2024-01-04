@@ -53,7 +53,7 @@ if &ft ==# 'javascript' || &ft ==# 'typescript'
 endif
 
 if &ft ==# 'markdown'
-  nn <buffer> <silent> <C-]> :e <cfile><CR>
-  ":CocInstall coc-markdown-preview-enhanced coc-webview
-  nn <buffer> <silent> <Leader>p :silent CocCommand markdown-preview-enhanced.openPreview<CR>
+  au lvimrc FileType markdown
+    \ nn <buffer> <silent> <C-]> :e <cfile><CR>
+    \ | nn <buffer> <silent> <Leader>p :silent CocCommand markdown-preview-enhanced.openPreview<CR>
 endif
