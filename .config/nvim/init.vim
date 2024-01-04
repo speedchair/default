@@ -27,12 +27,32 @@ if !exists('g:vscode')
   let g:python3_host_prog = "~/.local/bin/python3"
   set synmaxcol=1000
 
-  aug vimrc
-    au! *
-    au FileType yaml,json
-      \ setl et ts=2 sw=2
-      \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
-  aug END
+  au vimrc FileType javascript,typescript
+    \ setl et ts=4 sw=4
+    \ | nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
+    \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
+    \ | nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+  au vimrc FileType yaml,json
+    \ setl et ts=2 sw=2
+    \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
+  au vimrc FileType markdown
+    \ nn <buffer> <silent> <C-]> :e <cfile><CR>
+    \ | nn <buffer> <silent> <Leader>p :silent CocCommand markdown-preview-enhanced.openPreview<CR>
+  au vimrc FileType python
+    \ setl et ts=4 sw=4
+    \ | let b:coc_root_patterns = ['.git', 'venv', '.venv']
+    \ | nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
+    \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
+    \ | nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+  au vimrc FileType go
+    \ setl noet ts=8 sw=8
+      \ | au! lvimrc * <buffer>
+      \ | au lvimrc BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
+      \ | au lvimrc BufWritePre <buffer> :silent call CocAction('runCommand', 'editor.action.organizeImport')
+    \ | nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
+    \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
+    \ | nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+    \ | nn <buffer> <silent> <Leader>i :call CocAction('jumpImplementation')<CR>
 endif
 Plug 'michaeljsmith/vim-indent-object'
 call plug#end()
