@@ -5,7 +5,7 @@ if !exists('g:vscode')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-vinegar'
 
-  colorscheme peachpuff
+  colorscheme shine
   set clipboard=unnamedplus
   set cmdheight=0
   set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
