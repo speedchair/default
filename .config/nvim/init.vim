@@ -31,14 +31,15 @@ if !exists('g:vscode')
       \ setl et ts=2 sw=2
       \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
     au FileType markdown
-      \ nn <buffer> <silent> <C-]> :e <cfile><CR>
       \ | nn <buffer> <silent> <Leader>p :silent CocCommand markdown-preview-enhanced.openPreview<CR>
-    au FileType python
-      \ setl et ts=4 sw=4
-      \ | let b:coc_root_patterns = ['.git', 'venv', '.venv']
-      \ | nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
-      \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
-      \ | nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+    fu! VimrcPython()
+      setl et ts=4 sw=4
+      let b:coc_root_patterns = ['.git', 'venv', '.venv']
+      nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
+      nn <buffer> <silent> K :call CocAction('doHover')<CR>
+      nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+    endf
+    au FileType python call VimrcPython()
     fu! VimrcGo()
       setl noet ts=8 sw=8
       aug lvimrc
