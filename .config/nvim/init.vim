@@ -31,7 +31,7 @@ if !exists('g:vscode')
       \ setl et ts=2 sw=2
       \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
     au FileType markdown
-      \ | nn <buffer> <silent> <Leader>p :silent CocCommand markdown-preview-enhanced.openPreview<CR>
+      \ nn <buffer> <silent> <Leader>p :silent CocCommand markdown-preview-enhanced.openPreview<CR>
     fu! VimrcPython()
       setl et ts=4 sw=4
       let b:coc_root_patterns = ['.git', 'venv', '.venv']
