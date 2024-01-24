@@ -13,7 +13,6 @@ if !exists('g:vscode')
   set statusline=%f\ %m
   set title
 
-  au BufRead *.git/COMMIT_EDITMSG setl spell
   cnoreabbrev S CocSearch
   inoremap <silent><expr> <c-x><c-o> coc#refresh()
   let g:coc_disable_transparent_cursor = 1
@@ -22,16 +21,20 @@ if !exists('g:vscode')
 
   aug vimrc
     au! *
-    au FileType javascript,typescript
-      \ setl et ts=4 sw=4
-      \ | nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
-      \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
-      \ | nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
-    au FileType yaml,json
-      \ setl et ts=2 sw=2
-      \ | nn <buffer> <silent> K :call CocAction('doHover')<CR>
-    au FileType markdown
-      \ nn <buffer> <silent> <Leader>p :silent CocCommand markdown-preview-enhanced.openPreview<CR>
+    au BufRead *.git/COMMIT_EDITMSG setl spell
+    fu! VimrcJs()
+      setl et ts=4 sw=4
+      nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
+      nn <buffer> <silent> K :call CocAction('doHover')<CR>
+      nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+    endf
+    au FileType javascript,typescript call VimrcJs()
+    fu! VimrcJson()
+      setl et ts=2 sw=2
+      nn <buffer> <silent> K :call CocAction('doHover')<CR>
+    endf
+    au FileType yaml,json call VimrcJson()
+    au FileType markdown nn <buffer> <silent> <Leader>p :silent CocCommand markdown-preview-enhanced.openPreview<CR>
     fu! VimrcPython()
       setl et ts=4 sw=4
       let b:coc_root_patterns = ['.git', 'venv', '.venv']
