@@ -21,6 +21,7 @@ if !exists('g:vscode')
 
   aug vimrc
     au! *
+    au BufWritePost $MYVIMRC source %
     au BufRead *.git/COMMIT_EDITMSG setl spell
     fu! VimrcJs()
       setl et ts=4 sw=4
