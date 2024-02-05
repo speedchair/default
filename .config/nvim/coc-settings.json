@@ -16,6 +16,6 @@
       "settings": {}
     }
   },
-  "markdown-preview-enhanced.previewTheme": "one-dark.css",
+  "markdown-preview-enhanced.previewTheme": "solarized-light.css",
   "snippets.ultisnips.pythonPrompt": false
 }
