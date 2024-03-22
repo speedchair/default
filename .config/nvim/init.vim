@@ -35,7 +35,7 @@ if !exists('g:vscode')
       nn <buffer> <silent> K :call CocAction('doHover')<CR>
     endf
     au FileType yaml,json call VimrcJson()
-    au FileType markdown nn <buffer> <silent> <Leader>p :silent CocCommand markdown-preview-enhanced.openPreview<CR>
+    au FileType markdown nn <buffer> <silent> <Leader>v :silent CocCommand markdown-preview-enhanced.openPreview<CR>
     fu! VimrcPython()
       setl et ts=4 sw=4
       let b:coc_root_patterns = ['.git', 'venv', '.venv']
