@@ -17,5 +17,6 @@
     }
   },
   "markdown-preview-enhanced.previewTheme": "solarized-light.css",
+  "markdown-preview-enhanced.plantumlServer": "https://localhost:8081/svg/",
   "snippets.ultisnips.pythonPrompt": false
 }
