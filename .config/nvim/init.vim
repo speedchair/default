@@ -7,10 +7,9 @@ if !exists('g:vscode')
 
   colorscheme shine
   set clipboard=unnamedplus
-  set cmdheight=0
   set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
-  set noshowmode showcmdloc=statusline
-  set statusline=%f\ %m\ %S
+  set noshowcmd noshowmode
+  set statusline=%f\ %m
   set title
 
   cnoreabbrev S CocSearch
