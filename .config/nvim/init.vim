@@ -9,8 +9,8 @@ if !exists('g:vscode')
   set clipboard=unnamedplus
   set cmdheight=0
   set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
-  set noshowcmd noshowmode
-  set statusline=%f\ %m
+  set noshowmode showcmdloc=statusline
+  set statusline=%f\ %m\ %S
   set title
 
   cnoreabbrev S CocSearch
