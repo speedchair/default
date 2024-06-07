@@ -12,6 +12,7 @@ if !exists('g:vscode')
   set statusline=%f\ %m
   set title
 
+  autocmd BufEnter * set indentexpr=
   cnoreabbrev S CocSearch
   inoremap <silent><expr> <c-x><c-o> coc#refresh()
   let g:coc_disable_transparent_cursor = 1
