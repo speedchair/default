@@ -10,5 +10,6 @@
 /Library/Application Support/VSCodium/*
 !/Library/Application Support/VSCodium/User/
 /Library/Application Support/VSCodium/User/*
-!/Library/Application Support/VSCodium/User/*ings.json
+!/Library/Application Support/VSCodium/User/settings.json
+!/Library/Application Support/VSCodium/User/keybindings.json
 !*.kdbx
