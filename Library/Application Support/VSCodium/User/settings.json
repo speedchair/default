@@ -1,0 +1,18 @@
+{
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.startupEditor": "none",
+    "git.openRepositoryInParentFolders": "never",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.minimap.enabled": false,
+    "go.toolsManagement.autoUpdate": true,
+    "markdown-preview-enhanced.plantumlJarPath": "/usr/local/opt/plantuml/libexec/plantuml.jar",
+    "update.showReleaseNotes": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "-workbench.action.quickOpenView"
+    ],
+    "continue.enableTabAutocomplete": true,
+    "window.customTitleBarVisibility": "windowed",
+    "breadcrumbs.enabled": false
+}

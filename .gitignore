@@ -2,4 +2,13 @@
 !/.config/
 /.config/*
 !/.config/nvim/
+!/Library/
+/Library/*
+!/Library/Application Support/
+/Library/Application Support/*
+!/Library/Application Support/VSCodium/
+/Library/Application Support/VSCodium/*
+!/Library/Application Support/VSCodium/User/
+/Library/Application Support/VSCodium/User/*
+!/Library/Application Support/VSCodium/User/*ings.json
 !*.kdbx
