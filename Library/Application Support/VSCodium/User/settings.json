@@ -16,5 +16,6 @@
     "window.customTitleBarVisibility": "windowed",
     "breadcrumbs.enabled": false,
     "zenMode.centerLayout": false,
-    "workbench.editor.showTabs": "none"
+    "workbench.editor.showTabs": "single",
+    "window.density.editorTabHeight": "compact"
 }
