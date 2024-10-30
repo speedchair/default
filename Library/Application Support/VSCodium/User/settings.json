@@ -2,6 +2,8 @@
     "breadcrumbs.enabled": false,
     "continue.enableTabAutocomplete": true,
     "editor.minimap.enabled": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
@@ -9,11 +11,13 @@
     "go.toolsManagement.autoUpdate": true,
     "markdown-preview-enhanced.plantumlJarPath": "/usr/local/opt/plantuml/libexec/plantuml.jar",
     "terminal.integrated.commandsToSkipShell": [
-        "-workbench.action.quickOpenView"
+        "-workbench.action.quickOpenView",
+        "-workbench.action.terminal.focusFind"
     ],
     "update.showReleaseNotes": false,
-    //"window.customTitleBarVisibility": "windowed",
+    "window.customTitleBarVisibility": "windowed",
     "window.density.editorTabHeight": "compact",
+    "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Solarized Light",
     "workbench.startupEditor": "none",
     "zenMode.centerLayout": false,
