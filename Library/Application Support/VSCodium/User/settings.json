@@ -15,5 +15,6 @@
     "continue.enableTabAutocomplete": true,
     "window.customTitleBarVisibility": "windowed",
     "breadcrumbs.enabled": false,
-    "zenMode.centerLayout": false
+    "zenMode.centerLayout": false,
+    "workbench.editor.showTabs": "none"
 }
