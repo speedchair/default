@@ -3,7 +3,7 @@
     "continue.enableTabAutocomplete": true,
     "editor.minimap.enabled": false,
     "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 0,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
