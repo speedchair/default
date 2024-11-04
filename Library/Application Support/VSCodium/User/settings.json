@@ -2,7 +2,6 @@
     "breadcrumbs.enabled": false,
     "continue.enableTabAutocomplete": true,
     "editor.minimap.enabled": false,
-    "editor.renderLineHighlight":  "none",
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.verticalScrollbarSize": 0,
     "extensions.experimental.affinity": {

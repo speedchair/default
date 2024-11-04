@@ -9,7 +9,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 
-" colorscheme shine
+colorscheme shine
 set clipboard=unnamedplus
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
 set noshowcmd noshowmode
