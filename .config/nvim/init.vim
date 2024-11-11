@@ -23,7 +23,7 @@ autocmd BufEnter * set indentexpr=
 cnoreabbrev S CocSearch
 inoremap <silent><expr> <c-x><c-o> coc#refresh()
 let g:coc_disable_transparent_cursor = 1
-let g:python3_host_prog = "/usr/local/bin/python3.10"
+let g:python3_host_prog = "/usr/local/bin/python3.13"
 set synmaxcol=1000
 
 aug vimrc
