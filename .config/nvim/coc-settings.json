@@ -17,6 +17,5 @@
     }
   },
   "markdown-preview-enhanced.previewTheme": "solarized-light.css",
-  "markdown-preview-enhanced.plantumlJarPath": "/usr/local/opt/plantuml/libexec/plantuml.jar",
-  "snippets.ultisnips.pythonPrompt": false
-}
+  "markdown-preview-enhanced.plantumlJarPath": "/usr/local/opt/plantuml/libexec/plantuml.jar"
+  }
