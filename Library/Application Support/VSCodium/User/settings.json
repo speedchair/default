@@ -20,5 +20,6 @@
     "workbench.startupEditor": "none",
     "zenMode.centerLayout": false,
     "zenMode.showTabs": "single",
-    "zenMode.silentNotifications": true
+    "zenMode.silentNotifications": true,
+    "terminal.integrated.tabs.enabled": false
 }
