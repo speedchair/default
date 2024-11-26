@@ -1,5 +1,7 @@
 call plug#begin()
 Plug 'michaeljsmith/vim-indent-object'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 
 set clipboard=unnamedplus
 
