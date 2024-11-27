@@ -49,7 +49,11 @@ aug vimrc
     call BindKeys()
   endf
   au FileType yaml,json call SetJSON()
-  au FileType markdown nn <buffer> <silent> <Leader>v :silent CocCommand markdown-preview-enhanced.openPreview<CR>
+  fu! SetMarkdown()
+    call BindKeys()
+    nn <buffer> <silent> <Leader>v :silent CocCommand markdown-preview-enhanced.openPreview<CR>
+  endf
+  au FileType markdown call SetMarkdown()
   fu! SetPython()
     setl et ts=4 sw=4
     call BindKeys()
