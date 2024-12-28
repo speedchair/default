@@ -35,6 +35,7 @@ if !exists('g:vscode')
       nn <buffer> <silent> <Leader>i :call CocAction('jumpImplementation')<CR>
       nn <buffer> <silent> K :call CocAction('doHover')<CR>
       nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+      xm <buffer> <silent> = <Plug>(coc-format-selected)
     endf
 
     fu! SetJavaScript()
