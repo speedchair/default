@@ -1,6 +1,6 @@
 {
   "go.goplsOptions": {
-    "gofumpt": true
+    "gofumpt": false
   },
   "languageserver": {
     "terraform": {
