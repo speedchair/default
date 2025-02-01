@@ -19,18 +19,18 @@ if !exists('g:vscode')
   set title
 
   autocmd BufEnter * set indentexpr=
-  cnoreabbrev S CocSearch
   inoremap <silent><expr> <c-x><c-o> coc#refresh()
   let g:coc_disable_transparent_cursor = 1
   let g:python3_host_prog = "/usr/local/bin/python3.13"
   set synmaxcol=511
 
+  nm <silent> <Leader>F :<C-u>CocSearch <C-F>i
+  xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', escape(@", '\.*+?^$()[]{}\|'))<CR>
   aug vimrc
     au! *
     au BufWritePost $MYVIMRC source %
     au BufRead *.git/COMMIT_EDITMSG setl spell
 
-    xmap <silent> <Leader>F y:<C-u>call CocActionAsync('search', escape(@", '\.*^$~[]'))<CR>
     fu! BindKeys()
       nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
       nm <buffer> <silent> <Leader>a <Plug>(coc-codeaction-selected)
