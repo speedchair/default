@@ -13,7 +13,7 @@ if !exists('g:vscode')
   Plug 'tpope/vim-vinegar'
 
   colorscheme shine
-  set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
+  set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬,leadmultispace:\ ‧
   set noshowcmd noshowmode
   set statusline=%f\ %m
   set title
@@ -29,6 +29,8 @@ if !exists('g:vscode')
     au! *
     au BufWritePost $MYVIMRC source %
     au BufRead *.git/COMMIT_EDITMSG setl spell
+    nnoremap <silent> <Leader>F :CocSearch |
+    vnoremap <silent> <Leader>F :<C-u>let @/ = escape(@", '\.*^$~[]')<Bar>CocSearch @/
 
     fu! BindKeys()
       nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
