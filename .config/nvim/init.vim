@@ -29,14 +29,18 @@ if !exists('g:vscode')
     au! *
     au BufWritePost $MYVIMRC source %
     au BufRead *.git/COMMIT_EDITMSG setl spell
-    nnoremap <silent> <Leader>F :CocSearch |
-    vnoremap <silent> <Leader>F :<C-u>let @/ = escape(@", '\.*^$~[]')<Bar>CocSearch @/
 
     fu! BindKeys()
       nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
+      nm <buffer> <silent> <Leader>a <Plug>(coc-codeaction-selected)
+      nm <buffer> <silent> <Leader>r <Plug>(coc-codeaction-refactor-selected)
+      nm <buffer> <silent> [g <Plug>(coc-diagnostic-prev)
+      nm <buffer> <silent> ]g <Plug>(coc-diagnostic-next)
       nn <buffer> <silent> <Leader>i :call CocAction('jumpImplementation')<CR>
       nn <buffer> <silent> K :call CocAction('doHover')<CR>
       nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+      xm <buffer> <silent> <Leader>a <Plug>(coc-codeaction-selected)
+      xm <buffer> <silent> <Leader>r <Plug>(coc-codeaction-refactor-selected)
       xm <buffer> <silent> = <Plug>(coc-format-selected)
     endf
 
