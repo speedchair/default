@@ -58,7 +58,7 @@ if !exists('g:vscode')
 
     fu! SetMarkdown()
       call BindKeys()
-      nn <buffer> <silent> <Leader>v :silent CocCommand markdown-preview-enhanced.openPreview<CR>
+      nn <buffer> <silent> <Leader>V :<C-u>silent CocCommand markdown-preview-enhanced.openPreview<CR>
     endf
     au FileType markdown call SetMarkdown()
 
