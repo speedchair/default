@@ -32,14 +32,15 @@ if !exists('g:vscode')
     au BufRead *.git/COMMIT_EDITMSG setl spell
 
     fu! BindKeys()
-      nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
+      nm <buffer> <silent> <C-]> <Plug>(coc-definition)
+      nm <buffer> <silent> <Leader>N <Plug>(coc-rename)
       nm <buffer> <silent> <Leader>a <Plug>(coc-codeaction-selected)
-      nm <buffer> <silent> <Leader>r <Plug>(coc-rename)
       nm <buffer> <silent> [g <Plug>(coc-diagnostic-prev)
       nm <buffer> <silent> ]g <Plug>(coc-diagnostic-next)
-      nn <buffer> <silent> <Leader>i :call CocAction('jumpImplementation')<CR>
+      nn <buffer> <silent> <Leader>i <Plug>(coc-implementation)
+      nn <buffer> <silent> == <Plug>(coc-format)
       nn <buffer> <silent> K :call CocAction('doHover')<CR>
-      nn <buffer> <silent> gH :call CocAction('jumpReferences')<CR>
+      nn <buffer> <silent> gH <Plug>(coc-references)
       xm <buffer> <silent> <Leader>a <Plug>(coc-codeaction-selected)
       xm <buffer> <silent> = <Plug>(coc-format-selected)
     endf
