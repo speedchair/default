@@ -26,6 +26,7 @@ if !exists('g:vscode')
 
   nm <silent> <Leader>F :<C-u>CocSearch <C-F>i
   xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', escape(@", '\.*+?^$()[]{}\|'))<CR>
+  xm <silent> <Leader>y "+y
   aug vimrc
     au! *
     au BufWritePost $MYVIMRC source %
