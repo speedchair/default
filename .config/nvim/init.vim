@@ -4,7 +4,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
-set clipboard=unnamedplus
+" set clipboard+=unnamedplus
 
 if !exists('g:vscode')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
