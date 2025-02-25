@@ -26,8 +26,7 @@ if !exists('g:vscode')
   set synmaxcol=511
 
   nm <silent> <Leader>F :<C-u>CocSearch <C-F>i
-  "xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', '-U', substitute(escape(@", ' \.*+?^$()[]{}\|'), '\n', '\\n', 'g'))<CR>
-  xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', '-U', escape(@", ' \.*+?^$()[]{}\|'))<CR>
+  xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', '-U', escape(@", '\.*+?^$()[]{}\|'))<CR>
   aug vimrc
     au! *
     au BufWritePost $MYVIMRC source %
