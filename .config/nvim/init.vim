@@ -4,6 +4,9 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
+nn <silent> y "+y
+xn <silent> y "+y
+
 if !exists('g:vscode')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'sheerun/vim-polyglot'
@@ -24,7 +27,6 @@ if !exists('g:vscode')
 
   nm <silent> <Leader>F :<C-u>CocSearch <C-F>i
   xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', escape(@", '\.*+?^$()[]{}\|'))<CR>
-  xm <silent> <Leader>y "+y
   aug vimrc
     au! *
     au BufWritePost $MYVIMRC source %
