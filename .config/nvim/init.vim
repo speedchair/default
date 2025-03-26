@@ -32,7 +32,7 @@ if !exists('g:vscode')
     au BufWritePost $MYVIMRC source %
     au BufRead *.git/COMMIT_EDITMSG setl spell
 
-    fu! BindKeys()
+    fu! s:BindKeys()
       nm <buffer> <silent> <C-]> <Plug>(coc-definition)
       nm <buffer> <silent> <Leader>N <Plug>(coc-rename)
       nm <buffer> <silent> <Leader>a <Plug>(coc-codeaction-selected)
@@ -46,41 +46,41 @@ if !exists('g:vscode')
       xm <buffer> <silent> = <Plug>(coc-format-selected)
     endf
 
-    fu! SetJavaScript()
+    fu! s:SetJavaScript()
       setl et ts=4 sw=4
-      call BindKeys()
+      call s:BindKeys()
     endf
-    au FileType javascript,typescript call SetJavaScript()
+    au FileType javascript,typescript call s:SetJavaScript()
 
-    fu! SetJSON()
+    fu! s:SetJSON()
       setl et ts=2 sw=2
-      call BindKeys()
+      call s:BindKeys()
     endf
-    au FileType yaml,json call SetJSON()
+    au FileType yaml,json call s:SetJSON()
 
-    fu! SetMarkdown()
-      call BindKeys()
+    fu! s:SetMarkdown()
+      call s:BindKeys()
       nn <buffer> <silent> <Leader>V :<C-u>silent CocCommand markdown-preview-enhanced.openPreview<CR>
     endf
-    au FileType markdown call SetMarkdown()
+    au FileType markdown call s:SetMarkdown()
 
-    fu! SetPython()
+    fu! s:SetPython()
       setl et ts=4 sw=4
-      call BindKeys()
+      call s:BindKeys()
       let b:coc_root_patterns = ['.git', 'venv', '.venv']
     endf
-    au FileType python call SetPython()
+    au FileType python call s:SetPython()
 
-    fu! SetGolang()
+    fu! s:SetGolang()
       setl noet ts=8 sw=8
-      call BindKeys()
+      call s:BindKeys()
       aug lvimrc
         au! * <buffer>
         au BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
         au BufWritePre <buffer> :silent CocCommand editor.action.organizeImport
       aug END
     endf
-    au FileType go call SetGolang()
+    au FileType go call s:SetGolang()
   aug END
 endif
 call plug#end()
