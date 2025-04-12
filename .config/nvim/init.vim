@@ -60,6 +60,7 @@ if !exists('g:vscode')
 
     fu! s:SetMarkdown()
       call s:BindKeys()
+      setl spell
       nn <buffer> <silent> <Leader>V :<C-u>silent CocCommand markdown-preview-enhanced.openPreview<CR>
     endf
     au FileType markdown call s:SetMarkdown()
