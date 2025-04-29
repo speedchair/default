@@ -78,7 +78,7 @@ if !exists('g:vscode')
       call s:BindKeys()
       aug lvimrc
         au! * <buffer>
-        au BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
+        " au BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
         au BufWritePre <buffer> :silent CocCommand editor.action.organizeImport
       aug END
     endf
