@@ -13,13 +13,16 @@
         "-workbench.action.quickOpenView",
         "-workbench.action.terminal.focusFind"
     ],
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.tabs.enabled": false,
     "update.showReleaseNotes": false,
     "window.customTitleBarVisibility": "windowed",
     "window.density.editorTabHeight": "compact",
     "workbench.colorTheme": "Solarized Light",
+    "workbench.enableExperiments": false,
     "workbench.startupEditor": "none",
     "zenMode.centerLayout": false,
     "zenMode.showTabs": "single",
-    "zenMode.silentNotifications": true,
-    "terminal.integrated.tabs.enabled": false
+    "zenMode.silentNotifications": true
 }
