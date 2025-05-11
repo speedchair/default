@@ -24,5 +24,9 @@
     "workbench.startupEditor": "none",
     "zenMode.centerLayout": false,
     "zenMode.showTabs": "single",
-    "zenMode.silentNotifications": true
+    "zenMode.silentNotifications": true,
+    "github-enterprise.uri": "https://bbraun.ghe.com",
+    "github.copilot.advanced": {
+        "authProvider": "github-enterprise"
+    }
 }
