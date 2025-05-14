@@ -74,12 +74,14 @@ if !exists('g:vscode')
     au FileType python call s:SetPython()
 
     fu! s:SetGolang()
-      setl noet ts=8 sw=8
       call s:BindKeys()
+      " let b:editorconfig = {'indent_size': 8}
+      setl noet ts=8 sw=8
       aug lvimrc
         au! * <buffer>
         " au BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
         au BufWritePre <buffer> :silent CocCommand editor.action.organizeImport
+        au BufReadPost,BufNewFile <buffer> if exists('b:editorconfig'} let b:editorconfig.indent_size = 8 endif
       aug END
     endf
     au FileType go call s:SetGolang()
