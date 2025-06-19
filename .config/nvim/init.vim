@@ -8,7 +8,6 @@ nn <silent> y "+y
 xn <silent> y "+y
 
 if !exists('g:vscode')
-  Plug 'lewis6991/gitsigns.nvim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-fugitive'
@@ -26,6 +25,7 @@ if !exists('g:vscode')
   let g:python3_host_prog = "/usr/local/bin/python3.13"
   set notermguicolors
   set synmaxcol=511
+  nm <silent> <Leader>dq :<C-u>call fugitive#DiffClose()<CR>
 
   nm <silent> <Leader>F :<C-u>CocSearch <C-F>i
   xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', '-U', escape(@", '-\.*+?^$()[]{}\|'))<CR>
