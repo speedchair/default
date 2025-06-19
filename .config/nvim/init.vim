@@ -8,6 +8,7 @@ nn <silent> y "+y
 xn <silent> y "+y
 
 if !exists('g:vscode')
+  Plug 'airblade/vim-gitgutter'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-fugitive'
