@@ -23,9 +23,9 @@ if !exists('g:vscode')
   inoremap <silent><expr> <c-x><c-o> coc#refresh()
   let g:coc_disable_transparent_cursor = 1
   let g:python3_host_prog = "/usr/local/bin/python3.13"
+  nm <silent> <Leader>dq :<C-u>call fugitive#DiffClose()<CR>
   set notermguicolors
   set synmaxcol=511
-  nm <silent> <Leader>dq :<C-u>call fugitive#DiffClose()<CR>
 
   nm <silent> <Leader>F :<C-u>CocSearch <C-F>i
   xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', '-U', escape(@", '-\.*+?^$()[]{}\|'))<CR>
