@@ -78,6 +78,7 @@ if !exists('g:vscode')
       " let b:editorconfig = v:false
       setl noet ts=8 sw=8
       call s:BindKeys()
+      nn <buffer> <silent> <Leader>^ :<C-u>silent CocCommand go.test.toggle<CR>
       nn <buffer> <silent> == :<C-u>silent call CocAction('organizeImport')<CR><Plug>(coc-format)
       aug lvimrc
         au! * <buffer>
