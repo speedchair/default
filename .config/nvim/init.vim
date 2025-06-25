@@ -82,8 +82,8 @@ if !exists('g:vscode')
       nn <buffer> <silent> == :<C-u>silent call CocAction('organizeImport')<CR><Plug>(coc-format)
       aug lvimrc
         au! * <buffer>
-        " au BufWritePre <buffer> :silent CocCommand editor.action.organizeImport
-        " au BufWritePre <buffer> :silent CocCommand editor.action.formatDocument
+        au InsertLeave <buffer> silent CocCommand editor.action.organizeImport 
+        au InsertLeave <buffer> silent CocCommand editor.action.formatDocument
       aug END
     endf
     au FileType go call s:SetGolang()
