@@ -40,6 +40,7 @@ if !exists('g:vscode')
       nm <buffer> <silent> <Leader>a <Plug>(coc-codeaction-selected)
       nm <buffer> <silent> [g <Plug>(coc-diagnostic-prev)
       nm <buffer> <silent> ]g <Plug>(coc-diagnostic-next)
+      nn <buffer> <silent> <Leader>D <Plug>(coc-declaration)
       nn <buffer> <silent> <Leader>i <Plug>(coc-implementation)
       nn <buffer> <silent> == <Plug>(coc-format)
       nn <buffer> <silent> K :call CocAction('doHover')<CR>
