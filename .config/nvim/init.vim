@@ -14,7 +14,7 @@ if !exists('g:vscode')
   Plug 'tpope/vim-vinegar'
 
   colorscheme shine
-  set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬,leadmultispace:\ ‧
+  set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬,leadmultispace:\┆\ "
   set noshowcmd noshowmode
   set statusline=%f\ %m
   set title
