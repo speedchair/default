@@ -4,7 +4,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
-nn <silent> <Leader>y% :<C-u> let @+ = @%<CR>
+nn <silent> "%y :<C-u>let @+ = @%<CR>
 nn <silent> y "+y
 xn <silent> y "+y
 
