@@ -24,7 +24,7 @@ if !exists('g:vscode')
   inoremap <silent><expr> <c-x><c-o> coc#refresh()
   let g:coc_disable_transparent_cursor = 1
   let g:python3_host_prog = "/usr/local/bin/python3.13"
-  nm <silent> <Leader>dq :<C-u>call fugitive#DiffClose()<CR>
+  au DiffUpdated * if bufname('fugitive:*' . expand('%:t')) != '' | nm <buffer> <silent> dq :<C-u>call fugitive#DiffClose()<CR> | endif
   set notermguicolors
   set synmaxcol=511
 
@@ -89,6 +89,7 @@ if !exists('g:vscode')
       aug END
     endf
     au FileType go call s:SetGolang()
+
   aug END
 endif
 call plug#end()
