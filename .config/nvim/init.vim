@@ -20,11 +20,9 @@ if !exists('g:vscode')
   set statusline=%f\ %m
   set title
 
-  autocmd BufEnter * set indentexpr=
   inoremap <silent><expr> <c-x><c-o> coc#refresh()
   let g:coc_disable_transparent_cursor = 1
   let g:python3_host_prog = "/usr/local/bin/python3.13"
-  au DiffUpdated * if bufname('fugitive:*' . expand('%:t')) != '' | nm <buffer> <silent> dq :<C-u>call fugitive#DiffClose()<CR> | endif
   set notermguicolors
   set synmaxcol=511
 
@@ -32,8 +30,10 @@ if !exists('g:vscode')
   xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', '-U', escape(@", '-\.*+?^$()[]{}\|'))<CR>
   aug vimrc
     au! *
-    au BufWritePost $MYVIMRC source %
+    au BufEnter * set indentexpr=
     au BufRead *.git/COMMIT_EDITMSG setl spell
+    au BufWritePost $MYVIMRC source %
+    au DiffUpdated * if bufname('fugitive:*' . expand('%:t')) != '' | nm <buffer> <silent> dq :<C-u>call fugitive#DiffClose()<CR> | endif
 
     fu! s:BindKeys()
       nm <buffer> <silent> <C-]> <Plug>(coc-definition)
