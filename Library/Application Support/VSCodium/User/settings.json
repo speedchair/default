@@ -25,4 +25,7 @@
     "zenMode.centerLayout": false,
     "zenMode.showTabs": "single",
     "zenMode.silentNotifications": true,
+    "github.copilot.advanced": {
+        "authProvider": "github-enterprise"
+    },
 }
