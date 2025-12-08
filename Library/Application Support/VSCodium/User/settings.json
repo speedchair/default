@@ -28,4 +28,5 @@
         "authProvider": "github-enterprise"
     },
     "github-enterprise.uri": "https://bbraun.ghe.com",
+    "github.copilot.nextEditSuggestions.enabled": true,
 }
