@@ -29,4 +29,5 @@
     },
     "github-enterprise.uri": "https://bbraun.ghe.com",
     "github.copilot.nextEditSuggestions.enabled": true,
+    "go.diagnostic.vulncheck": "Off",
 }
