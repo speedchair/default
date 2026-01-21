@@ -1,4 +1,5 @@
 {
+    "editor.autoClosingBrackets": "never",
     "editor.minimap.enabled": false,
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.verticalScrollbarSize": 0,
