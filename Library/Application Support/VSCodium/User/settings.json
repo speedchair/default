@@ -6,6 +6,7 @@
         "asvetliakov.vscode-neovim": 1
     },
     "git.openRepositoryInParentFolders": "never",
+    "go.diagnostic.vulncheck": "Off",
     "go.toolsManagement.autoUpdate": true,
     "markdown-preview-enhanced.plantumlJarPath": "/usr/local/opt/plantuml/libexec/plantuml.jar",
     "terminal.integrated.commandsToSkipShell": [
@@ -29,5 +30,4 @@
     },
     "github-enterprise.uri": "https://bbraun.ghe.com",
     "github.copilot.nextEditSuggestions.enabled": true,
-    "go.diagnostic.vulncheck": "Off",
 }
