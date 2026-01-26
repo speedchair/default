@@ -1,6 +1,8 @@
 {
     "editor.autoClosingBrackets": "never",
+    "editor.guides.indentation": false,
     "editor.minimap.enabled": false,
+    "editor.renderLineHighlight": "none",
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.verticalScrollbarSize": 0,
     "extensions.experimental.affinity": {
