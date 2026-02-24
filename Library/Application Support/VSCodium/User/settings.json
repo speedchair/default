@@ -33,5 +33,4 @@
     },
     "github-enterprise.uri": "https://bbraun.ghe.com",
     "github.copilot.nextEditSuggestions.enabled": true,
-    "chat.viewSessions.orientation": "stacked",
 }
