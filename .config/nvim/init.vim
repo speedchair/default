@@ -82,6 +82,7 @@ if !exists('g:vscode')
       call s:BindKeys()
       nn <buffer> <silent> <Leader>^ :<C-u>silent CocCommand go.test.toggle<CR>
       nn <buffer> <silent> == :<C-u>silent call CocAction('organizeImport')<CR><Plug>(coc-format)
+      nn <buffer> <silent> gH <Plug>(coc-references-used)
       aug lvimrc
         au! * <buffer>
         au InsertLeave <buffer> silent CocCommand editor.action.organizeImport 
