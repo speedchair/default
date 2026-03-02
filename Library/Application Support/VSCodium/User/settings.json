@@ -11,7 +11,6 @@
     "git.openRepositoryInParentFolders": "never",
     "go.diagnostic.vulncheck": "Off",
     "go.toolsManagement.autoUpdate": true,
-    "markdown-preview-enhanced.plantumlJarPath": "/usr/local/opt/plantuml/libexec/plantuml.jar",
     "terminal.integrated.commandsToSkipShell": [
         "-workbench.action.quickOpenView",
         "-workbench.action.terminal.focusFind"
@@ -28,9 +27,5 @@
     "zenMode.centerLayout": false,
     "zenMode.showTabs": "single",
     "zenMode.silentNotifications": true,
-    "github.copilot.advanced": {
-        "authProvider": "github-enterprise"
-    },
-    "github-enterprise.uri": "https://bbraun.ghe.com",
     "github.copilot.nextEditSuggestions.enabled": true,
 }
