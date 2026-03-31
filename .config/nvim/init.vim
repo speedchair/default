@@ -26,7 +26,7 @@ if !exists('g:vscode')
   set notermguicolors
   set synmaxcol=511
 
-  nm <silent> <Leader>F :<C-u>CocSearch <C-F>i
+  nm <silent> <Leader>F :<C-u>CocSearch -S <C-F>i
   xm <silent> <Leader>F y:<C-u>call CocActionAsync('search', '-U', escape(@", '-\.*+?^$()[]{}\|'))<CR>
   aug vimrc
     au! *
