@@ -24,6 +24,7 @@
     "workbench.colorTheme": "Solarized Light",
     "workbench.enableExperiments": false,
     "workbench.startupEditor": "none",
+    "workbench.panel.defaultLocation": "right",
     "zenMode.centerLayout": false,
     "zenMode.showTabs": "single",
     "zenMode.silentNotifications": true,
@@ -33,4 +34,5 @@
         "authProvider": "github-enterprise"
     },
     "chat.viewSessions.orientation": "stacked",
+    "debug.internalConsoleOptions": "neverOpen",
 }
