@@ -63,9 +63,9 @@ if !exists('g:vscode')
     au FileType yaml,json call s:SetJSON()
 
     fu! s:SetMarkdown()
-      call s:BindKeys()
+      setl et ts=4 sw=4
       setl spell
-      nn <buffer> <silent> <Leader>V :<C-u>silent CocCommand markdown-preview-enhanced.openPreview<CR>
+      call s:BindKeys()
     endf
     au FileType markdown call s:SetMarkdown()
 
