@@ -33,6 +33,5 @@
     "github.copilot.advanced": {
         "authProvider": "github-enterprise"
     },
-    "chat.viewSessions.orientation": "stacked",
     "debug.internalConsoleOptions": "neverOpen",
 }
