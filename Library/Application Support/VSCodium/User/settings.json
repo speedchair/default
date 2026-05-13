@@ -34,4 +34,5 @@
         "authProvider": "github-enterprise"
     },
     "debug.internalConsoleOptions": "neverOpen",
+    "chat.viewSessions.orientation": "stacked",
 }
