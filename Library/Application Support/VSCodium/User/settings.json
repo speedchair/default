@@ -35,4 +35,5 @@
     },
     "debug.internalConsoleOptions": "neverOpen",
     "chat.viewSessions.orientation": "stacked",
+    "workbench.editor.empty.hint": "hidden",
 }
