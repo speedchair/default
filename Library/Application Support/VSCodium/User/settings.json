@@ -29,10 +29,6 @@
     "zenMode.showTabs": "single",
     "zenMode.silentNotifications": true,
     "github.copilot.nextEditSuggestions.enabled": true,
-    "github-enterprise.uri": "https://bbraun.ghe.com",
-    "github.copilot.advanced": {
-        "authProvider": "github-enterprise"
-    },
     "debug.internalConsoleOptions": "neverOpen",
     "chat.viewSessions.orientation": "stacked",
     "workbench.editor.empty.hint": "hidden",
